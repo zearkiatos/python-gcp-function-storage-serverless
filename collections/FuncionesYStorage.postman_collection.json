@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "6ae29353-9835-4fb8-98eb-41d366ee978f",
+		"name": "FuncionesYStorage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "funcion-heroes-storage-crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Alignment\": \"good\",\n    \"Eye color\": \"yellow\",\n    \"Gender\": \"Male\",\n    \"Hair color\": \"No Hair\",\n    \"Height\": 203,\n    \"Name\": \"A-Bomb\",\n    \"Publisher\": \"Marvel Comics\",\n    \"Race\": \"Human\",\n    \"Skin color\": \"-\",\n    \"Weight\": 441\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{region}}-{{id_proyect}}.cloudfunctions.net/funcion-heroes-storage-crear",
+					"protocol": "https",
+					"host": [
+						"{{region}}-{{id_proyect}}",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion-heroes-storage-crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "funcion-heroes-storage-listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{region}}-{{id_proyect}}.cloudfunctions.net/funcion-heroes-storage-listar",
+					"protocol": "https",
+					"host": [
+						"{{region}}-{{id_proyect}}",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion-heroes-storage-listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "funcion-heroes-storage-detalle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{region}}-{{id_proyect}}.cloudfunctions.net/funcion-heroes-storage-detalle?id=",
+					"protocol": "https",
+					"host": [
+						"{{region}}-{{id_proyect}}",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion-heroes-storage-detalle"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_proyect",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "region",
+			"value": "us-central1",
+			"type": "default"
+		}
+	]
+}
