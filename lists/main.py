@@ -7,7 +7,7 @@ import env_vars as env
 client = storage.Client()
 bucket = client.get_bucket(env.get_bucketname())
 
-def listar_heroes(request):
+def list_heroes(request):
     """Definición de la función invocada por la Cloud Function. 
     Muestra los identificadores de todos los héroes registrados en el sistema
     
